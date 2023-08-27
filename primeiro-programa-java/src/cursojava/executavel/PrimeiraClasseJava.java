@@ -13,6 +13,7 @@ import curso.java.excecao.ExecaoProcessarNota;
 import cursojava.classes.Aluno;
 import cursojava.classes.Diretor;
 import cursojava.classes.Disciplina;
+import cursojava.classes.Secretario;
 import cursojava.classesauxiliares.FuncaoAutenticacao;
 import cursojava.constantes.StatusAluno;
 
@@ -26,26 +27,14 @@ public class PrimeiraClasseJava {
 		try {
 			lerArquivo();
 			
-		/*Tratamento de erro abaixo utilizando FileNotFoundException
-		try {
-			File fil = new File("c://lines.txt");	
-			Scanner scanner = new Scanner(fil);
-		}catch (FileNotFoundException e) {
-			throw new ExecaoProcessarNota(e.getMessage());
-		}
-		*/
-			
 		String login = JOptionPane.showInputDialog("Informe o login");
 		String senha = JOptionPane.showInputDialog("Informe a senha");
-		
-		
-		
 		
 		
 		/*iniciando uma nova funcao de autenticacao abaixo if (new FuncaoAutenticacao*/
 		/*Recebendo um objeto secretario (new Secretario(login, senha)*/
 		/*E invocando o autenticar .autenticar()*/
-		if (new FuncaoAutenticacao(new Diretor(login, senha)).autenticar()) {/*Vou travar o contrato para autorizar somente quem realmente tem o contrato 100% legítimo*/
+		if (new FuncaoAutenticacao(new Secretario(login, senha)).autenticar()) {/*Vou travar o contrato para autorizar somente quem realmente tem o contrato 100% legítimo*/
 		
 		List<Aluno> alunos = new ArrayList<Aluno>();/*criando lista de alunos*/
 		
@@ -53,15 +42,15 @@ public class PrimeiraClasseJava {
 		HashMap<String, List<Aluno>> maps = new HashMap<String, List<Aluno>>();
 		
 		
-		for (int qtd = 1; qtd <=1; qtd++) {
+		for (int qtd = 1; qtd <=2; qtd++) {
 			
 			/*New Aluno() é uma instancia (Criacao de Objeto)*/
 			/*aluno1 é uma referencia para o objeto Aluno*/
 			
 			String nome = JOptionPane.showInputDialog("Qual o nome do aluno "+qtd+" ?");/*Interação com usuário pedindo qual o nome e passando a primeira valor do for que é 1 para a quantidade qtd incializada em 1*/
-			String idade = JOptionPane.showInputDialog("Qual a idade?");
-			/*
-			String dataNascimento =  JOptionPane.showInputDialog("Data de nascimento?");
+			//String idade = JOptionPane.showInputDialog("Qual a idade?");
+			
+			/*String dataNascimento =  JOptionPane.showInputDialog("Data de nascimento?");
 			String rg = JOptionPane.showInputDialog("Registro Geral");
 			String cpf =  JOptionPane.showInputDialog("Qual é o CPF?");
 			String mae = JOptionPane.showInputDialog("Qual é o Nome da Mãe?");
@@ -73,7 +62,7 @@ public class PrimeiraClasseJava {
 			Aluno aluno1 = new Aluno();/*Criando o objeto aluno*/
 			
 			aluno1.setNome(nome); /*setando o nome para o aluno 1*/
-			aluno1.setIdade(Integer.valueOf(idade));
+			//aluno1.setIdade(Integer.valueOf(idade));
 			/*
 			aluno1.setDataNascimento(dataNascimento);
 			aluno1.setRegistroGeral(rg);
@@ -88,9 +77,12 @@ public class PrimeiraClasseJava {
 				String nomeDisciplina = JOptionPane.showInputDialog("Nome da disciplina "+pos+" ?");
 				String notaDisciplina = JOptionPane.showInputDialog("Nota da disciplina "+pos+" ?");
 				
-				Disciplina disciplina = new Disciplina();/*Criando na meória o objeto Disciplina*/
+				Disciplina disciplina = new Disciplina();/*Criando na memória o objeto Disciplina*/
 				disciplina.setDisciplina(nomeDisciplina);/*Setando a Disciplina*/
+				/*Não importar com esse erro comentado abaixo pois estamos só usando para testar*/
 				//disciplina.setNota(Double.valueOf(notaDisciplina));/*Setando a Nota*/
+				
+				
 				
 				aluno1.getDisciplinas().add(disciplina);/*Buscando a lista de Disciplinas no objeto Aluno e add adicionando a esta lista uma nova disciplina*/
 			}
