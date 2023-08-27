@@ -18,8 +18,10 @@ public class Matriz {
 		
 		for (int poslinha = 0; poslinha < notas.length; poslinha ++) {/*Percorre as linhas*/
 			System.out.println("===================================================");
+			
 			/*Percorre as colunas*/
 			for (int poscoluna = 0; poscoluna < notas[poslinha].length; poscoluna++) {
+				
 				System.out.println("Valor da matriz: " + notas[poslinha][poscoluna]);
 			}
 			

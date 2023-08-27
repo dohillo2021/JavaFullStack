@@ -8,8 +8,8 @@ public class TesteConta {
 		
 		System.out.println(bancaria);
 		
-		bancaria.diminui100Resis();
-		bancaria.diminui100Resis();
+		bancaria.diminui100Reais();
+		bancaria.diminui100Reais();
 		
 		System.out.println(bancaria);
 		
@@ -22,7 +22,9 @@ public class TesteConta {
 		bancaria.soma100Reais();
 		System.out.println(bancaria);
 		
-		String string = new String();
+		String string = new String();// criando um objeto String do java, existem muitos métodos dentro dele 
+		
+		//String.  (e após o ponto aparece todos os métodos do objeto String
 		
 	}
 

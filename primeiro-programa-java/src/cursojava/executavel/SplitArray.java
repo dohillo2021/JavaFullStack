@@ -8,7 +8,7 @@ import javax.swing.plaf.synth.SynthColorChooserUI;
 public class SplitArray {
 	public static void main(String[] args) {
 		
-		String texto = " Alex, curso Java, 80, 70, 90, 89";
+		String texto = " alex, curso Java, 80, 70, 90, 89";
 		
 		String[] valoresArray = texto.split(",");
 		
@@ -25,9 +25,8 @@ public class SplitArray {
 		/*Convertendo uma lista para Array */
 		
 		String[] conversaoArray = list.toArray(new String[6]);
-		System.out.println(conversaoArray);
 		
-		for (int pos = 0; pos< conversaoArray.length; pos++) {
+		for (int pos = 0; pos < conversaoArray.length; pos++) {
 			System.out.println(conversaoArray[pos]);
 		}
 		

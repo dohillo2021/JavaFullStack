@@ -63,6 +63,7 @@ public class Secretario extends Pessoa implements PermitirAcesso {
 		return autenticar();
 	}
 	
+	/*Esse é o método do contrato de autenticação da interface*/
 	@Override
 	public boolean autenticar() {
 		return login.equals("admin") && senha.equals("admin");

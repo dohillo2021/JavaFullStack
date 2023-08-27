@@ -9,7 +9,7 @@ public class ContaBancaria {
 	public void soma100Reais() {/*Este método é simples e tudo que precisa está dentro da classe(objeto)*/
 		saldo += 100;
 	}
-	public void diminui100Resis() {
+	public void diminui100Reais() {
 		saldo -=100;
 	}
 	public void sacarDinheiro(double saque) {

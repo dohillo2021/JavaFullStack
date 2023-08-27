@@ -9,7 +9,7 @@ public class ArrayVetor {
 	/*Usado para executar código*/
 	public static void main(String[] args) {
 		double[] notas = {8.8,9.7,7.6,6.8};
-		double[] notaslogica = {7.3,7.9,9.4,8.1};
+		double[] notaslogica = {7.1,5.7,9.6,7.8};
 
 		/*Criação do aluno*/
 		Aluno aluno = new Aluno();
@@ -21,7 +21,7 @@ public class ArrayVetor {
 		disciplina.setDisciplina("Curso de Java");
 		disciplina.setNota(notas);
 	
-		/*Como relaciona como amarra essa disciplina amarrada com o aluno*/
+		/*Como relaciona? como amarra essa disciplina amarrada com o aluno?*/
 		
 		aluno.getDisciplinas().add(disciplina);
 		
@@ -40,10 +40,12 @@ public class ArrayVetor {
 		aluno2.setNome("Enrico Fernandes Machado");
 		aluno2.setNomeEscola("JDEV Treinamento");
 		
+		
 		/*Criação da Disciplina 3 e 4*/
 		Disciplina disciplina3 = new Disciplina();
 		disciplina3.setDisciplina("Curso de Java");
 		disciplina3.setNota(notas);
+		
 	
 		/*Como relaciona como amarra essa disciplina amarrada com o aluno*/
 		
@@ -56,6 +58,7 @@ public class ArrayVetor {
 		disciplina4.setNota(notaslogica);
 		
 		aluno2.getDisciplinas().add(disciplina4);
+		System.out.println("--------------------------------------------------------------");
 		//------------------------------------------------
 		
 		Aluno [] arrayAlunos = new Aluno[2]; // Aqui temos um Array
@@ -66,9 +69,12 @@ public class ArrayVetor {
 		for (int pos = 0; pos < arrayAlunos.length; pos ++) {
 			
 			System.out.println("Nome do aluno é: " + arrayAlunos[pos].getNome());/*percorrendo lista alunosalunos*/
+			System.out.println("--------------------------------------------------------------");
+			
 			
 			for (Disciplina d : arrayAlunos[pos].getDisciplinas()) {/*Percorrendo lista de Disciplinas*/
 				System.out.println("Nome da disciplina é: " + d.getDisciplina());
+				
 				
 				for (int posnota = 0; posnota < d.getNota().length; posnota++) {
 					System.out.println("A nota número :" + posnota + " é igual = " + d.getNota()[posnota]);

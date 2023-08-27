@@ -143,16 +143,16 @@ public class Aluno extends Pessoa {
 	/*Normalmente em back trabalhamos com boolean, pois fica mais facil manipular em qualquer lugar*/
 	public boolean getAlunoAprovado() {
 		double media = this.getMediaNota();
-		if (media >= 70) {
+		if (media >= 70) {/*Aprovado*/
 			return true;
 		} else {
-			return false;
+			return false;/*Reprovado*/
 		}
 	}
 	
 	/*Normalmente é mais usado a responsabilidade da String para o Front (tela)*/
 	public String getAlunoAprovado2() {
-		double media = this.getMediaNota();
+		double media = this.getMediaNota();/*O operador this siginifica que vamos fazer uma chamada para algum método ou para alguma variável dentro do próprio objeto. Nesta linah estamos atribuindo o resultado do método getMediaNota ao valor da variavel Media*/
 		if (media >= 50) {
 			if(media >= 70) {
 				return StatusAluno.APROVADO;
@@ -165,13 +165,9 @@ public class Aluno extends Pessoa {
 	}
 	
 	
-	
-	
 	@Override
 	public String toString() {
-		return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
-				+ registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
-				+ ", dataMatricula=" + dataMatricula + ", serieMatriculado=" + serieMatriculado + ", nomeEscola="
+		return "Aluno [dataMatricula=" + dataMatricula + ", serieMatriculado=" + serieMatriculado + ", nomeEscola="
 				+ nomeEscola + ", disciplinas=" + disciplinas + "]";
 	}
 
@@ -199,7 +195,7 @@ public class Aluno extends Pessoa {
 		}
 	
 	public String msgMaiorIdade() {
-		return this.pessoaMaiorIdade() ? "Oba Aluno é maior de idade" :"Ixii vc é menor de idade";
+		return this.pessoaMaiorIdade() ? "Oba Aluno é maior de idade" :"Ixii vc é menor de idade";/*Operador Ternário*/
 	}
 	
 	
